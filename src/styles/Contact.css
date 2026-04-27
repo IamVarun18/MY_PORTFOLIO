@@ -205,7 +205,13 @@
 }
 
 @media (max-width: 768px) {
+  .contact { padding: 5rem 5%; }
+  .contact-head { margin-bottom: 2.5rem; }
   .contact-body { grid-template-columns: 1fr; gap: 2.5rem; }
   .form-row { grid-template-columns: 1fr; }
   .btn-send { width: 100%; text-align: center; }
+}
+
+@media (max-width: 480px) {
+  .cl-val { font-size: 0.82rem; word-break: break-all; }
 }

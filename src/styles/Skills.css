@@ -54,5 +54,6 @@
 }
 
 @media (max-width: 768px) {
+  .skills { padding: 5rem 5%; }
   .skills-grid { grid-template-columns: 1fr; }
 }

@@ -132,5 +132,6 @@
 }
 
 @media (max-width: 600px) {
+  .projects { padding: 5rem 5%; }
   .projects-grid { grid-template-columns: 1fr; }
 }
