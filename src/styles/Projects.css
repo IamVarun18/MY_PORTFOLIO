@@ -1,0 +1,136 @@
+.projects {
+  padding: 7rem 5%;
+  background: var(--white);
+}
+
+.projects-head {
+  max-width: 1100px;
+  margin: 0 auto 3rem;
+}
+
+.projects-sub {
+  color: var(--muted);
+  font-size: 1.05rem;
+  margin-top: 0.5rem;
+}
+
+.projects-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: var(--off);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+
+.project-card:hover {
+  box-shadow: 0 12px 40px rgba(35, 71, 214, 0.13);
+  transform: translateY(-6px);
+}
+
+/* Preview header */
+.project-preview {
+  height: 160px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.1rem 1.25rem 1.25rem;
+}
+
+.project-badge {
+  align-self: flex-start;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.75rem;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.preview-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.preview-bar {
+  height: 5px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.preview-bar:nth-child(1) { width: 78%; }
+.preview-bar:nth-child(2) { width: 54%; }
+.preview-bar:nth-child(3) { width: 32%; }
+
+/* Card body */
+.project-body {
+  padding: 1.5rem 1.75rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  flex: 1;
+}
+
+.project-card h3 {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.project-card p {
+  color: var(--muted);
+  font-size: 0.93rem;
+  line-height: 1.65;
+  flex: 1;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag {
+  background: var(--blue-light);
+  color: var(--blue);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 100px;
+}
+
+.project-link {
+  color: var(--blue);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: gap 0.2s;
+}
+
+.project-link:hover { gap: 0.6rem; }
+
+@media (max-width: 900px) {
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .projects-grid { grid-template-columns: 1fr; }
+}
