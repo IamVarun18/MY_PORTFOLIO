@@ -5,24 +5,24 @@ import '../styles/Marketing.css'
 
 const services = [
   {
-    title: 'Web Development',
-    metric: 'MERN Full Stack',
-    description: 'React frontends, Node.js backends, MongoDB databases — complete web apps built, tested, and deployed.',
+    label: 'Build',
+    outcome: 'Websites that convert',
+    description: 'Sites built to turn visitors into customers — clear, fast, and made to sell. Not just pretty.',
   },
   {
-    title: 'Graphic Design',
-    metric: 'Brand & Identity',
-    description: 'Logos, banners, social kits, and brand guidelines that make your business look premium and consistent.',
+    label: 'Grow',
+    outcome: 'More clients',
+    description: 'SEO, ads, and content that bring the right people to you — and turn them into real enquiries.',
   },
   {
-    title: 'Social Media',
-    metric: 'Content + Growth',
-    description: 'Strategy, scheduling, content creation, and community management across Instagram, LinkedIn, and more.',
+    label: 'Brand',
+    outcome: 'A brand people trust',
+    description: 'Logo, identity, and content that make your business look as good as it actually is.',
   },
   {
-    title: 'Video & Motion',
-    metric: 'Reels & Animations',
-    description: 'Short-form video editing, reels, ads, and motion graphics crafted to stop the scroll and convert.',
+    label: 'Maintain',
+    outcome: 'Run it for you',
+    description: 'Updates, fixes, and improvements handled. It stays live, fast, and growing — without you lifting a finger.',
   },
 ]
 
@@ -47,22 +47,23 @@ export default function Marketing() {
     <section className="marketing" id="marketing" ref={ref}>
       <div className="marketing-inner">
         <div className="marketing-head">
-          <span className="marketing-eyebrow">Varun &amp; Co.</span>
-          <h2 className="section-title">The Full-Package Studio</h2>
+          <span className="marketing-eyebrow">What you get</span>
+          <h2 className="section-title">Outcomes, not deliverables</h2>
           <p className="marketing-sub">
-            One partner for everything your business needs online — code, design, content, and growth.
+            One partner for everything your business needs to grow — built, then run for you.
           </p>
         </div>
         <div className="marketing-grid">
           {services.map((s) => (
-            <div className="marketing-card" key={s.title}>
+            <div className="marketing-card" key={s.outcome}>
               <div className="m-accent" />
-              <div className="m-metric">{s.metric}</div>
-              <h3>{s.title}</h3>
+              <h3>{s.label}</h3>
+              <div className="m-metric">{s.outcome}</div>
               <p>{s.description}</p>
             </div>
           ))}
         </div>
+        <p className="marketing-tech">Built with: React, Node, and modern tooling.</p>
       </div>
     </section>
   )

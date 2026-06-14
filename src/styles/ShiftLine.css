@@ -1,0 +1,38 @@
+.shift {
+  padding: 6rem 5%;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+}
+
+.shift-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.shift-line {
+  font-family: var(--serif);
+  font-size: clamp(1.6rem, 3.6vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+  color: var(--text);
+}
+
+.shift-em {
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--blue); /* fallback */
+}
+
+.shift-sub {
+  margin-top: 1.5rem;
+  max-width: 640px;
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
+@media (max-width: 600px) {
+  .shift { padding: 4rem 5%; }
+}

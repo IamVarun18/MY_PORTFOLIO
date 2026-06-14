@@ -3,10 +3,10 @@ import './Navbar.css'
 
 const links = [
   { href: '#about', label: 'About' },
-  { href: '#skills', label: 'Skills' },
+  { href: '#process', label: 'Process' },
   { href: '#projects', label: 'Work' },
   { href: '#design', label: 'Design' },
-  { href: '#marketing', label: 'Agency' },
+  { href: '#marketing', label: 'Services' },
 ]
 
 export default function Navbar() {
@@ -23,7 +23,7 @@ export default function Navbar() {
 
   return (
     <nav id="navbar">
-      <div className="logo">VV<span>.</span></div>
+      <a href="#home" className="logo" aria-label="Back to top">VV<span>.</span></a>
 
       <ul className="nav-links">
         {links.map(({ href, label }) => (

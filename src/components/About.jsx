@@ -25,8 +25,8 @@ export default function About() {
       <div className="about-container">
         <div className="about-text">
           <h2 className="section-title">About Me</h2>
-          <p>I'm a full-stack developer and digital marketer passionate about building products that are both technically solid and strategically effective. I blend code and creativity to deliver real results.</p>
-          <p>When I'm not shipping features, I'm analysing funnels, running A/B tests, or reading about the latest in web performance.</p>
+          <p>I'm the person businesses call when they know they need to grow but aren't sure what to build first. I figure out what actually moves the needle — then build it, fast.</p>
+          <p>Website, ads, content, automations — whatever the goal needs. You don't manage tech or juggle freelancers. You tell me what you're stuck on; I handle the rest.</p>
         </div>
         <div className="about-stats">
           <div className="stat">

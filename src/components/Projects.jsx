@@ -9,7 +9,8 @@ import '../styles/Projects.css'
 const projects = [
   {
     title: 'Ishita Music',
-    description: 'Music artist website with streaming integrations, event listings, and a custom CMS for managing releases, videos, and gallery.',
+    result: 'Artist site that turns fans into bookings',
+    description: 'Music, press, and gallery in one polished place — built to convert visitors into real event enquiries.',
     tags: ['React', 'Node.js', 'MongoDB'],
     link: 'https://ishitamusic.com', // TODO: replace with actual live URL
     accent: '#1a1a2e',
@@ -18,7 +19,8 @@ const projects = [
   },
   {
     title: 'Life in a Lens',
-    description: 'Photography portfolio and client booking platform with a dynamic lightbox gallery, session enquiry form, and admin dashboard.',
+    result: 'Photography site that books sessions on autopilot',
+    description: 'Portfolio plus a booking flow and lightbox gallery that fills the calendar — no back-and-forth.',
     tags: ['React', 'Node.js', 'MongoDB'],
     link: 'https://life-in-a-lens.vercel.app',
     accent: '#2c1a10',
@@ -27,7 +29,8 @@ const projects = [
   },
   {
     title: 'Varun & Co.',
-    description: 'Full-service digital agency website showcasing branding, social media, video, and web development services for businesses.',
+    result: 'Agency brand clients trust on sight',
+    description: 'A full-service agency site for branding, content, and web — positioned to win bigger clients.',
     tags: ['React', 'Tailwind', 'Vercel'],
     link: '#', // TODO: add live URL when ready
     accent: '#2347d6',
@@ -89,7 +92,8 @@ export default function Projects() {
                 )}
               </div>
               <div className="project-body">
-                <h3>{project.title}</h3>
+                <span className="project-client">{project.title}</span>
+                <h3 className="project-result">{project.result}</h3>
                 <p>{project.description}</p>
                 <div className="project-tags">
                   {project.tags.map((tag) => (

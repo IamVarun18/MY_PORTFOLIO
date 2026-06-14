@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { gsap } from 'gsap'
 import './Hero.css'
 
-const techStack = ['React', 'Node.js', 'Python', 'PostgreSQL', 'Tailwind', 'Supabase']
+const outcomes = ['Websites that convert', 'More clients', 'Stronger brand', 'Automations', 'Handled for you']
 
 export default function Hero() {
   useEffect(() => {
@@ -12,7 +12,7 @@ export default function Hero() {
     gsap.to('.hero-cta',   { opacity: 1, y: 0, duration: 0.8, delay: 1,   ease: 'power3.out' })
     gsap.to('.hv-card',    { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out', stagger: 0.15, delay: 0.7 })
 
-    const words = ['websites', 'brands', 'products', 'experiences', 'growth']
+    const words = ['handled.', 'growing.', 'sorted.', 'scaling.', 'taken care of.']
     let wi = 0, ci = 0, deleting = false
     const el = document.getElementById('typed-text')
     let timerId = null
@@ -38,20 +38,19 @@ export default function Hero() {
 
       <div className="hero-inner">
         <div className="hero-content">
-          <span className="hero-badge">Full-Stack Developer &amp; Digital Marketer</span>
+          <span className="hero-badge">Business Growth Partner</span>
           <h1>
-            <span className="hero-static">We  build</span>
+            <span className="hero-static">Your business,</span>
             <span className="typed-wrap">
               <span id="typed-text"></span><span className="cursor">|</span>
             </span>
-            <span className="hero-static hero-static-dim">that grow businesses.</span>
           </h1>
           <p className="hero-sub">
-            React · Node.js · SEO · Paid Ads · CRO — all under one roof.
+            I figure out what you need to grow, then build it — fast.
           </p>
           <div className="hero-cta">
-            <a href="#projects" className="btn-primary">See My Work</a>
-            <a href="#contact" className="btn-ghost">Get In Touch</a>
+            <a href="#contact" className="btn-primary">Tell me what you're stuck on</a>
+            <a href="#projects" className="btn-ghost">See the work</a>
           </div>
         </div>
 
@@ -59,10 +58,10 @@ export default function Hero() {
           <div className="hv-card hv-card-stack">
             <div className="hv-chrome">
               <span className="hv-dot" /><span className="hv-dot" /><span className="hv-dot" />
-              <span className="hv-filename">tech-stack.json</span>
+              <span className="hv-filename">what-you-get.json</span>
             </div>
             <div className="hv-tags">
-              {techStack.map(t => <span key={t} className="hv-tag">{t}</span>)}
+              {outcomes.map(t => <span key={t} className="hv-tag">{t}</span>)}
             </div>
           </div>
 
