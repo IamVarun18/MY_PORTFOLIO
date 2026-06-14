@@ -7,7 +7,6 @@ const links = [
   { href: '#projects', label: 'Work' },
   { href: '#design', label: 'Design' },
   { href: '#marketing', label: 'Agency' },
-  { href: '#contact', label: 'Contact' },
 ]
 
 export default function Navbar() {

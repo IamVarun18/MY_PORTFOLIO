@@ -31,14 +31,14 @@ export default function Marketing() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from('.marketing-head', {
-        opacity: 0, y: 30, duration: 0.7, ease: 'power3.out',
-        scrollTrigger: { trigger: '.marketing', start: 'top 80%' },
-      })
-      gsap.from('.marketing-card', {
-        opacity: 0, y: 40, duration: 0.7, ease: 'power3.out', stagger: 0.12,
-        scrollTrigger: { trigger: '.marketing-grid', start: 'top 85%' },
-      })
+      gsap.fromTo('.marketing-head',
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out',
+          scrollTrigger: { trigger: '.marketing-head', start: 'top 85%' } })
+      gsap.fromTo('.marketing-card',
+        { opacity: 0, y: 40 },
+        { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out', stagger: 0.12,
+          scrollTrigger: { trigger: '.marketing-grid', start: 'top 85%' } })
     }, ref)
     return () => ctx.revert()
   }, [])

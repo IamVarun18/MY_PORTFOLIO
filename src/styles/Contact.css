@@ -47,7 +47,7 @@
 }
 
 /* Info column */
-.contact-links {
+.contact-info {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;

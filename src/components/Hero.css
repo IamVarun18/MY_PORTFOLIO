@@ -90,8 +90,15 @@
 /* typed-wrap is a block with reserved height — no layout shift as words change */
 .typed-wrap {
   display: block;
-  color: var(--blue);
   min-height: 1.15em;
+}
+
+#typed-text {
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--blue); /* fallback */
 }
 
 .cursor {
@@ -131,10 +138,15 @@
   background: var(--white);
   border-radius: 16px;
   border: 1px solid var(--border);
-  box-shadow: 0 4px 24px rgba(15, 23, 42, 0.07);
+  box-shadow: var(--shadow-md);
   padding: 1.25rem;
   opacity: 0;
   transform: translateY(24px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hv-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
 }
 
 /* Card 1 — tech stack */

@@ -40,7 +40,7 @@ export default function Hero() {
         <div className="hero-content">
           <span className="hero-badge">Full-Stack Developer &amp; Digital Marketer</span>
           <h1>
-            <span className="hero-static">I build</span>
+            <span className="hero-static">We  build</span>
             <span className="typed-wrap">
               <span id="typed-text"></span><span className="cursor">|</span>
             </span>

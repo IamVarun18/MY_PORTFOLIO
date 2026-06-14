@@ -8,14 +8,14 @@ export default function About() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from('.about-text', {
-        opacity: 0, y: 40, duration: 0.8, ease: 'power3.out',
-        scrollTrigger: { trigger: '.about-text', start: 'top 82%' },
-      })
-      gsap.from('.stat', {
-        opacity: 0, y: 30, duration: 0.6, ease: 'power3.out', stagger: 0.12,
-        scrollTrigger: { trigger: '.about-stats', start: 'top 85%' },
-      })
+      gsap.fromTo('.about-text',
+        { opacity: 0, y: 40 },
+        { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out',
+          scrollTrigger: { trigger: '.about-text', start: 'top 82%' } })
+      gsap.fromTo('.stat',
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out', stagger: 0.12,
+          scrollTrigger: { trigger: '.about-stats', start: 'top 85%' } })
     }, ref)
     return () => ctx.revert()
   }, [])

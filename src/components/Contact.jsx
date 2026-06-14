@@ -12,18 +12,18 @@ export default function Contact() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from('.contact-head', {
-        opacity: 0, y: 30, duration: 0.8, ease: 'power3.out',
-        scrollTrigger: { trigger: '.contact-head', start: 'top 85%' },
-      })
-      gsap.from('.contact-info', {
-        opacity: 0, x: -30, duration: 0.8, ease: 'power3.out',
-        scrollTrigger: { trigger: '.contact-body', start: 'top 80%' },
-      })
-      gsap.from('.contact-form', {
-        opacity: 0, x: 30, duration: 0.8, ease: 'power3.out',
-        scrollTrigger: { trigger: '.contact-body', start: 'top 80%' },
-      })
+      gsap.fromTo('.contact-head',
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out',
+          scrollTrigger: { trigger: '.contact-head', start: 'top 85%' } })
+      gsap.fromTo('.contact-info',
+        { opacity: 0, x: -30 },
+        { opacity: 1, x: 0, duration: 0.8, ease: 'power3.out',
+          scrollTrigger: { trigger: '.contact-body', start: 'top 80%' } })
+      gsap.fromTo('.contact-form',
+        { opacity: 0, x: 30 },
+        { opacity: 1, x: 0, duration: 0.8, ease: 'power3.out',
+          scrollTrigger: { trigger: '.contact-body', start: 'top 80%' } })
     }, ref)
     return () => ctx.revert()
   }, [])
